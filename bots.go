@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// Bot expected behavior for any bot
+type Bot interface {
+	greeting() string
+}
+
 // EngBot bot for english
 type EngBot struct {}
 
@@ -16,10 +21,6 @@ func (SpaBot) greeting() string {
 	return "Hola";
 }
 
-func printGreetingInEnglish(bot EngBot) {
-	fmt.Println(bot.greeting())
-}
-
-func printGreetingInSpanish(bot SpaBot) {
+func printGreeting(bot Bot) {
 	fmt.Println(bot.greeting())
 }

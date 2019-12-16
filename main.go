@@ -4,6 +4,6 @@ func main() {
 	engBot := EngBot{}
 	spaBot := SpaBot{}
 
-	printGreetingInEnglish(engBot)
-	printGreetingInSpanish(spaBot)
+	printGreeting(engBot)
+	printGreeting(spaBot)
 }
